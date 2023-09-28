@@ -1,3 +1,4 @@
+import random
 import time
 
 import pytest
@@ -43,12 +44,55 @@ def btn_selector():
 def fail():
     return '401'
 
+
 @pytest.fixture()
 def success():
     success_selector = """//*[@id="app"]/main/nav/a/span"""
     return success_selector
 
+
 @pytest.fixture
 def delay_between_tests():
     delay = 5
     time.sleep(delay)
+
+
+@pytest.fixture()
+def create_btn():
+    res = """//*[@id="create-btn"]"""
+    return res
+
+
+@pytest.fixture()
+def rnd_suffix():
+    return random.randint(1000, 9999)
+
+
+@pytest.fixture()
+def x_title():
+    ret_title = """//*[@id="create-item"]/div/div/div[1]/div/label/input"""
+    return ret_title
+
+
+@pytest.fixture()
+def x_save():
+    ret_save = """//*[@id="create-item"]/div/div/div[7]/div/button"""
+    return ret_save
+
+
+@pytest.fixture()
+def x_home():
+    ret_home = """//*[@id="app"]/main/nav/a"""
+    return ret_home
+
+
+@pytest.fixture()
+def x_new_post():
+    ret_new_post = """//*[@id="app"]/main/div/div[3]/div[1]/a[1]/h2"""
+    return ret_new_post
+
+
+@pytest.fixture()
+def x_id():
+    ret_id = "create-btn"
+    return ret_id
