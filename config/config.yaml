@@ -1,0 +1,7 @@
+address: https://test-stand.gb.ru
+driver_path: bin/chromedriver
+sleep_time: 3
+browser: chrome
+login: orangemouse807
+password: a4f8fb1d99
+wait: 10
